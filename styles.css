@@ -94,6 +94,12 @@ body {
     margin-right: 1.25rem;
 }
 
+.socials a {
+    font-size: 1.25rem;
+    color: #fff;
+    padding: 0.5rem 0.625rem;
+}
+
 .navbar ul {
     display: flex;
 }
@@ -237,6 +243,79 @@ ul {
     font-size: 50px;
 }
 
+.descriptions .descriptionsList {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1.25rem;
+    font-weight: 500;
+}
+
+.descriptions .descriptionsList > div {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem;
+}
+
+.descriptions .descriptionsList img {
+    border-radius: 0.188rem;
+}
+
+.descriptions .descriptionsList .list {
+    padding: 0.938rem 0 1.875rem 0;
+}
+
+.descriptions .descriptionsList h3 {
+    padding-top: 1.25rem;
+    font-weight: 500;
+    font-size: 1.313rem;
+}
+
+.descriptions .descriptionsList ul {
+    list-style: disc;
+    padding: 0 1.125rem;
+    font-size: 1.063rem;
+}
+
+.descriptions .descriptionsList .list ul li {
+    padding: 0.313rem 0;
+}
+
+.contact h2 {
+    font-weight: 500;
+    padding-top: 0.625rem 0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact .form-group {
+    padding-bottom: 1.25rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: none;
+}
+
+.contact input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 0.063rem solid #ddd;
+}
+
+.contact .btn {
+    padding: 0.75rem;
+}
+
+img {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
     color: #333;
@@ -248,60 +327,43 @@ h1, h2, h3 {
     font-weight: 100;
 }
 
-@media (max-width: 37.5rem) {
-    .navbar {
-        flex-direction: column;
-        height: 6.875rem;
-    }
+.bg-dark {
+    background: #333;
+    color: #fff;
 }
 
-@media (max-width: 37.5rem) {
-    .navbar .logo {
-        padding: 0 1.25rem 0.938rem;
-    }
-}
-@media (max-width: 56.25rem) {
-    .navbar .logo {
-        order: 1;
-        padding: 0.938rem 0;
-        transform: none;
-    }
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.875rem;
 }
 
-@media (max-width: 56.25rem) {
-    .navbar nav {
-        order: 3;
-    }
-}
-
-@media (max-width: 56.25rem) {
-    .navbar .social {
-        display: none;
-        order: 2;
-    }
-}
 
 @media (max-width: 31.25rem) {
     .home .content {
         line-height: 1.6;
     }
-}
 
-@media (max-width: 56.25rem) {
-    .home .content h1 {
-        font-size: 4.688rem;
+    .descriptions .descriptionsList {
+        padding: 0.625rem 1.875rem;
     }
-}
 
-@media (max-width: 31.25rem) {
     .home .content p {
         font-size: 1.188rem;
     }
 }
 
-@media (max-width: 56.25rem) {
-    .home .content p {
-        font-size: 1.25rem;
+@media (max-width: 37.5rem) {
+    .navbar {
+        flex-direction: column;
+        height: 6.875rem;
+    }
+
+    .navbar .logo {
+        padding: 0 1.25rem 0.938rem;
     }
 }
 
@@ -310,9 +372,54 @@ h1, h2, h3 {
         flex-direction: column;
     }
 
+    section.flex-columns .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
     section.flex-grid .column {
         flex: 50%;
         max-width: 50%;
+    }
+
+    .descriptions .descriptionsList {
+        flex-direction: column;
+        padding: 0.313rem 6.25rem;
+    }
+}
+
+@media (max-width: 56.25rem) {
+    .navbar .logo {
+        order: 1;
+        padding: 0.938rem 0;
+        transform: none;
+    }
+
+    .home .content p {
+        font-size: 1.25rem;
+    }
+
+    .navbar nav {
+        order: 3;
+    }
+
+    .navbar .social {
+        display: none;
+        order: 2;
+    }
+
+    .home .content h1 {
+        font-size: 4.688rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-columns .column-2 {
+        padding: 10px;
+    }
+
+    .flex-columns h2 {
+        font-size: 24px;
     }
 }
 
@@ -326,24 +433,9 @@ h1, h2, h3 {
     .flex-columns h4 {
         font-size: 18px;
     }
-}
 
-@media (max-width: 48rem) {
-    section.flex-columns .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
     .flex-columns .column {
         flex-basis: 100%;
-    }
-
-    .flex-columns {
-        display: block;
-        text-align: center;
-        padding: 10px;
     }
 
     .flex-columns .column-1, .flex-columns .column-2 {
@@ -353,15 +445,5 @@ h1, h2, h3 {
 
     .flex-columns h2 {
         font-size: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    .flex-columns .column-2 {
-        padding: 10px;
-    }
-
-    .flex-columns h2 {
-        font-size: 24px;
     }
 }
