@@ -16,7 +16,7 @@ body {
 }
 
 .home {
-    background: url(../Images/fundo.jpg) no-repeat center center / cover;
+    background: url(./Images/fundo.jpg) no-repeat center center / cover;
     height: 100vh;
     color: #fff;
     position: relative;
